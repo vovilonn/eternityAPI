@@ -4,9 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const cors = require("cors");
-const { SSL_PORT, PORT, HOST, ROOT_URL } = require("../config.json");
-const { tokensOfOwner, getBirthday } = require("./contract");
-const nftData = require("./data/data.json");
+const { SSL_PORT, PORT, HOST, ROOT_URL } = require("./config.json");
+const { tokensOfOwner, getBirthday } = require("./src/contract");
+const nftData = require("./src/data/data.json");
 
 const app = express();
 
@@ -21,11 +21,12 @@ const httpsServer = https.createServer(
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static("public"));
 
 // =========================
 
 app.get("/", (req, res) => {
-    res.json("server");
+    res.sendFile(__dirname + "/public" + "/index.html");
 });
 
 app.get("/api/nft/:id", async (req, res) => {
