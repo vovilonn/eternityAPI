@@ -100,4 +100,6 @@ function getTokensOfOwner(wallet) {
 }
 
 httpServer.listen(PORT, HOST, () => console.log(`HTTP server has been succesfully started at ${HOST}:${PORT}`));
-httpsServer.listen(SSL_PORT, HOST, () => console.log(`HTTPS server has been succesfully started at ${HOST}:${PORT}`));
+httpsServer.listen(SSL_PORT, HOST, () =>
+    console.log(`HTTPS server has been succesfully started at ${HOST}:${SSL_PORT}`)
+);
