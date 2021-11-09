@@ -1,13 +1,21 @@
 const express = require("express");
 const http = require("http");
+const https = require("https");
 const cors = require("cors");
-const { PORT, HOST, ROOT_URL } = require("../config.json");
+const { SSL_PORT, PORT, HOST, ROOT_URL } = require("../config.json");
 const { tokensOfOwner, getBirthday } = require("./contract");
 const nftData = require("./data/data.json");
 
 const app = express();
 
 const httpServer = http.createServer(app);
+const httpsServer = https.createServer(
+    {
+        key: fs.readFileSync(path.resolve("./etc/ssl/key.pem")),
+        cert: fs.readFileSync(path.resolve("./etc/ssl/cert.pem")),
+    },
+    app
+);
 
 app.use(express.json());
 app.use(cors());
@@ -88,4 +96,5 @@ function getTokensOfOwner(wallet) {
     return nftData.filter((e, i) => e.id === tokensID[i]);
 }
 
-httpServer.listen(PORT, HOST, () => console.log(`Server has been succesfully started at ${HOST}:${PORT}`));
+httpServer.listen(PORT, HOST, () => console.log(`HTTP server has been succesfully started at ${HOST}:${PORT}`));
+httpsServer.listen(SSL_PORT, HOST, () => console.log(`HTTPS server has been succesfully started at ${HOST}:${PORT}`));
