@@ -1,0 +1,17 @@
+{
+  "name": "site_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/sever.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ethers": "^5.5.1",
+    "express": "^4.17.1",
+    "https": "^1.0.0"
+  }
+}
