@@ -3,7 +3,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
-const { PORT, HOST, ROOT_URL } = require("../config.json");
+const { ROOT_URL } = require("../config.json");
 const { tokensOfOwner, getBirthday } = require("./contract");
 const nftData = require("./data/data.json");
 
@@ -96,4 +96,4 @@ function getTokensOfOwner(wallet) {
     return nftData.filter((e, i) => e.id === tokensID[i]);
 }
 
-httpsServer.listen(PORT, HOST, () => console.log("Server has been succesfully started!"));
+httpsServer.listen(80, "192.168.0.198", () => console.log(`Server has been succesfully started!`));

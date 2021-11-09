@@ -88,4 +88,4 @@ function getTokensOfOwner(wallet) {
     return nftData.filter((e, i) => e.id === tokensID[i]);
 }
 
-httpServer.listen(PORT, HOST, () => console.log("Server has been succesfully started!"));
+httpServer.listen(PORT, HOST, () => console.log(`Server has been succesfully started at ${HOST}:${PORT}`));
