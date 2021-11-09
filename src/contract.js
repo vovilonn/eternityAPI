@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 const ABI = require("../etc/abi.json");
-const contractAdress = "0x4eF3c9b2AE34178c11aEC32Dc30bA87C9CF739e1";
+const contractAdress = "0x4cb7670A8BD08489315d4EA7F9097CD7983c4e81";
 
 const provider = new ethers.providers.JsonRpcProvider(
     "https://eth-rinkeby.alchemyapi.io/v2/FeJ9BFIGGf3OGwRLZFIzUNyx-wPS3Rfb"
