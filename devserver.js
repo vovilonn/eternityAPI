@@ -3,8 +3,8 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
-const { ROOT_URL, PATH_TO_JSON } = require("./config.json");
-const nftData = require(PATH_TO_JSON);
+const { ROOT_URL } = require("./config.json");
+const nftData = require("./src/files/nftSample.json");
 
 const app = express();
 
