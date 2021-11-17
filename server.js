@@ -17,6 +17,8 @@ const httpsServer = https.createServer(
     app
 );
 
+const httpServer = http.createServer(app);
+
 app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
