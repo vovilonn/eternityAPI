@@ -1,4 +1,4 @@
-import ABI from "./abi.js";
+import ABI from "../../etc/abi.json" assert {type: "json"};
 const contractAddress = "0x4cb7670a8bd08489315d4ea7f9097cd7983c4e81";
 const mainChainId = "4";
 

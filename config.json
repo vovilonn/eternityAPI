@@ -2,5 +2,10 @@
     "PORT": 80, 
     "SSL_PORT": 443,
     "HOST": "89.108.77.75",
-    "ROOT_URL": "https://nft-cockiz.com/"
+    "ROOT_URL": "https://eternity-nft.com/",
+    "PATH_TO_JSON": "./src/data/nftSample.json",
+    "SSL": {
+        "key": "./etc/sslDev/key.pem",
+        "cert": "./etc/sslDev/cert.pem"
+    }
 }

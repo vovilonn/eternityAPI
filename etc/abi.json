@@ -179,7 +179,7 @@
   },
   {
     "inputs": [],
-    "name": "PHALLUS_MAX_AMOUNT",
+    "name": "ETERNITY_MAX_AMOUNT",
     "outputs": [
       {
         "internalType": "uint256",
@@ -192,7 +192,7 @@
   },
   {
     "inputs": [],
-    "name": "PHALLUS_PER_TX",
+    "name": "ETERNITY_PER_TX",
     "outputs": [
       {
         "internalType": "uint256",
@@ -205,20 +205,7 @@
   },
   {
     "inputs": [],
-    "name": "PHALLUS_PRICE",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "PHALLUS_TIME_FOR_GROWN",
+    "name": "ETERNITY_PRICE",
     "outputs": [
       {
         "internalType": "uint256",
@@ -245,31 +232,25 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "_founderPercents",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "string",
         "name": "_tokenURIPrefix",
         "type": "string"
       }
     ],
     "name": "_setTokenURIPrefix",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_tokenURISuffix",
+        "type": "string"
+      }
+    ],
+    "name": "_setTokenURISuffix",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -337,14 +318,8 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "founders",
+    "inputs": [],
+    "name": "founder",
     "outputs": [
       {
         "internalType": "address",
@@ -690,48 +665,12 @@
   {
     "inputs": [
       {
-        "internalType": "string[]",
-        "name": "ipfsHashs",
-        "type": "string[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "idTokens",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "setIpfsHash",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "newPercent",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      }
-    ],
-    "name": "setPercent",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "uint256",
         "name": "newPerTx",
         "type": "uint256"
       }
     ],
-    "name": "setPhallusPerTx",
+    "name": "setEternityBirthdaysPerTx",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -744,7 +683,25 @@
         "type": "uint256"
       }
     ],
-    "name": "setPhallusPrice",
+    "name": "setEternityBirthdaysPrice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string[]",
+        "name": "ipfsHashs",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "idTokens",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "setIpfsHash",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -860,6 +817,19 @@
   {
     "inputs": [],
     "name": "tokenURIPrefix",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "tokenURISuffix",
     "outputs": [
       {
         "internalType": "string",
