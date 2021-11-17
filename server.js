@@ -1,7 +1,7 @@
 const express = require("express");
-const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const http = require("http");
 const https = require("https");
 const cors = require("cors");
 const { SSL_PORT, PORT, HOST, ROOT_URL, PATH_TO_JSON, SSL } = require("./config.json");
@@ -17,7 +17,7 @@ const httpsServer = https.createServer(
     app
 );
 
-const httpServer = http.createServer(app);
+const httpServer = http.createServer(app)
 
 app.use(express.json());
 app.use(cors());
