@@ -5,7 +5,7 @@
     "ROOT_URL": "https://eternity-nft.com/",
     "PATH_TO_JSON": "/home/apps/eternityAPI/src/files/nftSample.json",
     "SSL": {
-        "key": "./etc/ssl/key.pem",
-        "cert": "./etc/ssl/cert.pem"
+        "key": "/home/apps/eternityAPI/etc/ssl/key.pem",
+        "cert": "/home/apps/eternityAPI/etc/ssl/cert.pem"
     }
 }
